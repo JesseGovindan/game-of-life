@@ -5,8 +5,8 @@ describe('GameOfLife', () => {
     // Arrange
     const game = new GameOfLife(fromTestBoard([
       ['O', 'O', 'O'],
-      ['O', 'O', 'X'],
-      ['O', 'O', 'X'],
+      ['O', 'X', 'O'],
+      ['O', 'O', 'O'],
     ]))
     // Act
     game.evolve()
@@ -14,6 +14,23 @@ describe('GameOfLife', () => {
     expect(game.getBoard()).toEqual(fromTestBoard([
       ['O', 'O', 'O'],
       ['O', 'O', 'O'],
+      ['O', 'O', 'O'],
+    ]))
+  })
+
+  test('', () =>{
+    //Arrange
+    const game = new GameOfLife(fromTestBoard([
+      ['O', 'X', 'X'],
+      ['O', 'X', 'O'],
+      ['O', 'O', 'O'],
+  ]))
+    //act
+    game.evolve();
+    //assert
+    expect(game.getBoard()).toEqual(fromTestBoard([
+      ['O', 'X', 'X'],
+      ['O', 'X', 'X'],
       ['O', 'O', 'O'],
     ]))
   })
