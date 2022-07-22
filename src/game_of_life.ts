@@ -12,7 +12,7 @@ export class GameOfLife {
   }
 
   getBoard(): Board {
-    return [
+    return  [
       [Cell.Dead, Cell.Dead, Cell.Dead],
       [Cell.Dead, Cell.Dead, Cell.Dead],
       [Cell.Dead, Cell.Dead, Cell.Dead],
